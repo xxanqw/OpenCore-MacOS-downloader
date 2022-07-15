@@ -4,8 +4,8 @@
 For Mac and Linux download source code from release, then install wget:
 ```
 pip3 install wget
-cd opnecoremacosdwnldr
-python3 opnecoremacosdwnldr.py
+cd opencoremacosdwnldr
+python3 opencoremacosdwnldr.py
 ```
 
 I am not related to Opencore in any way. Just made program without need to download all opencore package, search for macrecovery etc.
