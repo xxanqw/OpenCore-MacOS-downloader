@@ -1,7 +1,12 @@
-# OpenCore MacOS downloader (Windows)
+# OpenCore MacOS downloader (Windows/Mac/Linux)
  <img src="https://xxanqw.xyz/assets/img/sticker.png" width="100px" height="100px"></img><br>
  Simple python based console app to easilly download MacOS files for OpenCore
-
+For Mac and Linux download source code from release, then install wget:
+```
+pip3 install wget
+cd opnecoremacosdwnldr
+python3 opnecoremacosdwnldr.py
+```
 
 I am not related to Opencore in any way. Just made program without need to download all opencore package, search for macrecovery etc.
 
