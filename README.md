@@ -1,5 +1,5 @@
 # OpenCore MacOS downloader (Windows)
- <img href="https://xxanqw.xyz/assets/img/sticker.png" width="100px" height="100px"></img><br>
+ <img src="https://xxanqw.xyz/assets/img/sticker.png" width="100px" height="100px"></img><br>
  Simple python based console app to easilly download MacOS files for OpenCore
 
 
