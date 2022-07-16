@@ -7,8 +7,7 @@ pip3 install wget
 cd Downloads/OpenCore-MacOS-downloader-X.X
 python3 opencoremacosdwnldr.py
 ```
-Also on Mac you need <a href=python.org/downloads/>Python 3</a> in other way it won't work at all.
-<a href="https://youtu.be/WQB56K-zFjE">How to use it (video)</a>
+Also on Mac you need <a href=python.org/downloads/>Python 3</a> in other way it won't work at all.<br><a href="https://youtu.be/WQB56K-zFjE">How to use it (video)</a>
 
 I am not related to Opencore in any way. Just made program without need to download all opencore package, search for macrecovery etc.
 
