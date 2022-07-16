@@ -4,9 +4,10 @@
 For Mac download source code from release, then install wget:
 ```
 pip3 install wget
-cd opencoremacosdwnldr
+cd Downloads/OpenCore-MacOS-downloader-X.X
 python3 opencoremacosdwnldr.py
 ```
+<a href="https://youtu.be/WQB56K-zFjE">How to use it (video)</a>
 
 I am not related to Opencore in any way. Just made program without need to download all opencore package, search for macrecovery etc.
 
