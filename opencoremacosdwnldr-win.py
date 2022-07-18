@@ -1,18 +1,25 @@
+# I will recomend you to use EXE version of this script
+#
+# You can download it here - https://github.com/xxanqw/OpenCore-MacOS-downloader/releases
+
 import time
 import subprocess
 import wget
+import gdown
 
 p = time.sleep
 cmd = subprocess.call
 down = wget.download
-title = 'OpenCore MacOS downloader 0.3\n-----------------------------'
-fileurl = 'https://repo.xxanqw.xyz/files/hackintosh/macrecoveryapp.zip'
+title = 'OpenCore MacOS downloader 0.4 Windows\n-------------------------------------'
+fileurl = 'https://repo.xxanqw.xyz/files/hackintosh/macrecoveryapp.7z'
+szipurl = 'https://www.7-zip.org/a/7zr.exe'
+g = gdown.download
 
 down(fileurl)
-cmd("unzip ./macrecoveryapp.zip", shell=True)
-cmd("rm -r macrecoveryapp.zip", shell=True)
-cmd("rm -r /_MACOSX", shell=True)
-cmd("clear", shell=True)
+cmd("7zr x macrecoveryapp.7z", shell=True)
+cmd("del macrecoveryapp.7z", shell=True)
+cmd("del 7zr.exe", shell=True)
+cmd("cls", shell=True)
 
 Lion = str('Lion')
 MLion = str('Mountain Lion')
@@ -41,11 +48,12 @@ print('9. Catalina (10.15)')
 print('10. Big Sur (11.0)')
 print('11. Monterey (12.0)')
 print('L. Latest version\n')
+print('B. Bundles (Beta)\n\n')
 print('Ventura cant be downloaded at the moment\n\n')
 
-answer = input('Your choise: ')
+answer = input('Your choice: ')
 
-cmd('clear', shell=True)
+cmd('cls', shell=True)
 
 if answer == str('1'): print(title + '\nDownloading ' + Lion), p(1), cmd("python3 macrecovery.py -b Mac-C3EC7CD22292981F -m 00000000000F0HM00 download", shell=True)
 elif answer == str('2'): print(title + '\nDownloading ' + MLion), p(1), cmd("python3 macrecovery.py -b Mac-7DF2A3B5E5D671ED -m 00000000000F65100 download", shell=True)
@@ -60,8 +68,21 @@ elif answer == str('10'): print(title + '\nDownloading ' + BS), p(1), cmd("pytho
 elif answer == str('11'): print(title + '\nDownloading ' + Monterey), p(1), cmd("python3 macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 download", shell=True)
 elif answer == str('L'): print(title + '\nDownloading ' + LTST), p(1), cmd("python3 macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000000000 -os latest download", shell=True)
 
-cmd("rm -r macrecovery.py", shell=True)
-cmd("rm -r boards.json", shell=True)
-cmd('clear', shell=True)
+elif answer == str('B'):
+
+    HSierra_bundle = 'MacOS ' + HSierra + ' Bundle'
+
+    print(title + '\nWelcome to Bundles (Beta)\n')
+    print('1. '+ HSierra_bundle)
+    print('  | Motherboard: B450\n  | CPU: AMD Zen\n  | GPU: GTX 10**\n\n')
+
+    answer_bundle = input('Your choice: ')
+    hsierra_bundle_id = '1-9zPRFTAnmw4RjViG-zRVP0R4cBqhVeC'
+
+    if answer_bundle == str('1'): cmd('cls', shell=True), print(title + '\n\nDownloading ' + HSierra_bundle + '\n\n'), p(1), down(szipurl), print(), p(1), g(id=hsierra_bundle_id), p(1), cmd('cls', shell=True), print(title + '\n\nUnzipping ' + HSierra_bundle + ' \n\n'), p(1), cmd('7zr x HighSierraBundle.7z'), p(1), cmd('cls', shell=True), print(title + '\n\nCleaning up...'), cmd('del HighSierraBundle.7z', shell=True), cmd('del 7zr.exe', shell=True), cmd("del macrecovery.py", shell=True), cmd("del boards.json", shell=True), p(2), cmd('cls', shell=True), print(title + '\n\nHere you go!\nCheck "High Sierra Bundle" folder!\n\nScript by xxanqw - https://xxanqw.xyz/'), p(5), exit()
+
+cmd("del macrecovery.py", shell=True)
+cmd("del boards.json", shell=True)
+cmd('cls', shell=True)
 print(title + '\nAll done!\nScript by xxanqw - https://xxanqw.xyz/')
 p(3)
