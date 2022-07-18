@@ -7,12 +7,12 @@ import requests
 p = time.sleep
 cmd = subprocess.call
 down = wget.download
-title = 'OpenCore MacOS downloader 0.4b Linux\n------------------------------------'
+title = 'OpenCore MacOS downloader 0.4c Linux\n------------------------------------'
 fileurl = 'https://repo.xxanqw.xyz/files/hackintosh/macrecoveryapp.zip'
 g = gdown.download
 
 # updater
-ver = "b'0.4b'"
+ver = "b'0.4c'"
 webver = 'https://repo.xxanqw.xyz/files/ver/ver.txt'
 getver = requests.get(webver)
 checkver = str(getver.content)

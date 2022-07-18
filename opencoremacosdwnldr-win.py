@@ -12,14 +12,14 @@ import requests
 p = time.sleep
 cmd = subprocess.call
 down = wget.download
-title = 'OpenCore MacOS downloader 0.4b Windows\n--------------------------------------'
+title = 'OpenCore MacOS downloader 0.4c Windows\n--------------------------------------'
 fileurl = 'https://repo.xxanqw.xyz/files/hackintosh/macrecoveryapp.7z'
 szipurl = 'https://www.7-zip.org/a/7zr.exe'
 g = gdown.download
 
 
 # updater
-ver = "b'0.4b'"
+ver = "b'0.4c'"
 webver = 'https://repo.xxanqw.xyz/files/ver/ver.txt'
 getver = requests.get(webver)
 checkver = str(getver.content)
@@ -29,6 +29,7 @@ if str(checkver) != ver: print(title + '\nYour version is outdated, please downl
 
 # script
 down(fileurl)
+down(szipurl)
 cmd("7zr x macrecoveryapp.7z", shell=True)
 cmd("del macrecoveryapp.7z", shell=True)
 cmd("del 7zr.exe", shell=True)
