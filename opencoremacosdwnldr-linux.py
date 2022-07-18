@@ -7,16 +7,17 @@ import requests
 p = time.sleep
 cmd = subprocess.call
 down = wget.download
-title = 'OpenCore MacOS downloader 0.4a Linux\n------------------------------------'
+title = 'OpenCore MacOS downloader 0.4b Linux\n------------------------------------'
 fileurl = 'https://repo.xxanqw.xyz/files/hackintosh/macrecoveryapp.zip'
 g = gdown.download
 
 # updater
-ver = "b'0.4a'"
+ver = "b'0.4b'"
 webver = 'https://repo.xxanqw.xyz/files/ver/ver.txt'
 getver = requests.get(webver)
 checkver = str(getver.content)
 
+cmd('clear', shell=True)
 if str(checkver) != ver: print(title + '\nYour version is outdated, please download new from https://github.com/xxanqw/OpenCore-MacOS-downloader/releases'), input('\n\n\n(press enter to exit)'), exit()
 
 # script
@@ -53,7 +54,7 @@ print('9. Catalina (10.15)')
 print('10. Big Sur (11.0)')
 print('11. Monterey (12.0)')
 print('L. Latest version\n')
-print('Bundles (Beta)\n')
+print('B. Bundles (Beta)\n')
 print('Ventura cant be downloaded at the moment\n\n')
 
 answer = input('Your choise: ')
@@ -84,7 +85,7 @@ elif answer == str('B'):
     answer_bundle = input('Your choice: ')
     hsierra_bundle_id = '1XWMUrMwdNAZ04br_nMegqF2qKMMwQA4D'
 
-    if answer_bundle == str('1'): cmd('clear', shell=True), print(title + '\n\nDownloading ' + HSierra_bundle + '\n\n'), p(1), g(id=hsierra_bundle_id), p(1), cmd('clear', shell=True), print(title + '\n\nUnzipping ' + HSierra_bundle + ' \n\n'), p(1), cmd('unzip HighSierraBundle.zip'), p(1), cmd('clear', shell=True), print(title + '\n\nCleaning up...'), cmd('rm -x HighSierraBundle.zip', shell=True), cmd("rm -x macrecovery.py", shell=True), cmd("rm -x boards.json", shell=True), p(2), cmd('clear', shell=True), print(title + '\n\nHere you go!\nCheck "High Sierra Bundle" folder!\n\nScript by xxanqw - https://xxanqw.xyz/'), p(5), exit()
+    if answer_bundle == str('1'): cmd('clear', shell=True), print(title + '\n\nDownloading ' + HSierra_bundle + '\n\n'), p(1), g(id=hsierra_bundle_id), p(1), cmd('clear', shell=True), print(title + '\n\nUnzipping ' + HSierra_bundle + ' \n\n'), p(1), cmd('unzip -d "High Sierra Bundle" HighSierraBundle.zip', shell=True), p(1), cmd('clear', shell=True), print(title + '\n\nCleaning up...'), cmd('rm -r ./HighSierraBundle.zip', shell=True), cmd("rm -r ./macrecovery.py", shell=True), cmd("rm -r boards.json", shell=True), p(2), cmd('clear', shell=True), print(title + '\n\nHere you go!\nCheck "High Sierra Bundle" folder!\n\nScript by xxanqw - https://xxanqw.xyz/'), p(5), exit()
 
 cmd("rm -r macrecovery.py", shell=True)
 cmd("rm -r boards.json", shell=True)
