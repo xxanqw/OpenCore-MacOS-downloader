@@ -4,17 +4,29 @@
 
 import time
 import subprocess
+from urllib import response
 import wget
 import gdown
+import requests
 
 p = time.sleep
 cmd = subprocess.call
 down = wget.download
-title = 'OpenCore MacOS downloader 0.4 Windows\n-------------------------------------'
+title = 'OpenCore MacOS downloader 0.4a Windows\n--------------------------------------'
 fileurl = 'https://repo.xxanqw.xyz/files/hackintosh/macrecoveryapp.7z'
 szipurl = 'https://www.7-zip.org/a/7zr.exe'
 g = gdown.download
 
+
+# updater
+ver = "b'0.4a'"
+webver = 'https://repo.xxanqw.xyz/files/ver/ver.txt'
+getver = requests.get(webver)
+checkver = str(getver.content)
+
+if str(checkver) != ver: print(title + '\nYour version is outdated, please download new from https://github.com/xxanqw/OpenCore-MacOS-downloader/releases'), input('\n\n\n(press enter to exit)'), exit()
+
+# script
 down(fileurl)
 cmd("7zr x macrecoveryapp.7z", shell=True)
 cmd("del macrecoveryapp.7z", shell=True)

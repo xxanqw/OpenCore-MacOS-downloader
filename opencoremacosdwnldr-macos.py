@@ -2,14 +2,24 @@ import time
 import subprocess
 import wget
 import gdown
+import requests
 
 p = time.sleep
 cmd = subprocess.call
 down = wget.download
-title = 'OpenCore MacOS downloader 0.4 MacOS\n-----------------------------------'
+title = 'OpenCore MacOS downloader 0.4a MacOS\n------------------------------------'
 fileurl = 'https://repo.xxanqw.xyz/files/hackintosh/macrecoveryapp.zip'
 g = gdown.download
 
+# updater
+ver = "b'0.4a'"
+webver = 'https://repo.xxanqw.xyz/files/ver/ver.txt'
+getver = requests.get(webver)
+checkver = str(getver.content)
+
+if str(checkver) != ver: print(title + '\nYour version is outdated, please download new from https://github.com/xxanqw/OpenCore-MacOS-downloader/releases'), input('\n\n\n(press enter to exit)'), exit()
+
+# script
 down(fileurl)
 cmd("unzip ./macrecoveryapp.zip", shell=True)
 cmd("rm -r macrecoveryapp.zip", shell=True)
