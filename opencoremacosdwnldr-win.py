@@ -1,4 +1,4 @@
-# I will recomend you to use EXE version of this script
+# I will recommend you to use EXE version of this script
 #
 # You can download it here - https://github.com/xxanqw/OpenCore-MacOS-downloader/releases
 
