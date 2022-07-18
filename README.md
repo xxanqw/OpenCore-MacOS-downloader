@@ -14,4 +14,4 @@ cd Downloads/OpenCore-MacOS-downloader-X.X
 python3 opencoremacosdwnldr-macos/linux.py
 Only for Linux - install "unzip" with apt-get or with your install manager.
 ``` 
-Also on Mac you need <a href="python.org/downloads/">Python 3</a> in other way it won't work at all.<br><a href="https://youtu.be/WQB56K-zFjE">How to use it (video)</a>
+Also on Mac you need <a href="https://python.org/downloads">Python 3</a> in other way it won't work at all.<br><a href="https://youtu.be/WQB56K-zFjE">How to use it (video)</a>
