@@ -4,7 +4,6 @@
 
 import time
 import subprocess
-from urllib import response
 import wget
 import gdown
 import requests
